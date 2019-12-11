@@ -9,7 +9,9 @@ var app = require('./');
 app.start({
 	index	: !!process.env.INDEX,
 	bamboo	: process.env.BAMBOO || 'https://bamboo.asterisk.org',
-	port	: process.env.PORT || 3001
+	port	: process.env.PORT || 3001,
+	username : process.env.BAMBOOUSER || 'username',
+	password : process.env.BAMBOOPASS || 'password'
 }, function(err) {
 	console.log(err || 'Running');
 });
